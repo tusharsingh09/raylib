@@ -1814,6 +1814,16 @@ Vector2 GetWindowScaleDPI(void)
     return scale;
 }
 
+// Get current window opacity
+float GetWindowOpacity(void)
+{
+#if defined(PLATFORM_DESKTOP)
+    float opacity = 0.0f;
+    opacity = glfwGetWindowOpacity(CORE.Window.handle);
+    return opacity;
+#endif
+}
+
 // Get the human-readable, UTF-8 encoded name of the primary monitor
 const char *GetMonitorName(int monitor)
 {
