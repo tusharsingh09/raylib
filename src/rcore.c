@@ -1548,10 +1548,7 @@ void SetWindowOpacity(float opacity)
 void SetWindowFocused(void)
 {
 #if defined(PLATFORM_DESKTOP)
-    if (!IsWindowFocused())
-    {
-        glfwFocusWindow(CORE.Window.handle);
-    }
+    glfwWindowFocus(CORE.Window.handle);
 #endif
 }
 
