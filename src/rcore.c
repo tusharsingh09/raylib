@@ -3061,23 +3061,8 @@ long GetFileModTime(const char *fileName)
 }
 
 // Create a directory at the specified path with system commands
-RLAPI bool MakeDirectory(const char *path)
+RLAPI bool MakeDirectory(const char *path, const char *filename)
 {
-    bool result = false;
-
-    if (DirectoryExists(path))
-    {
-        return result;
-    }
-
-    system(TextFormat("mkdir %s", path));
-    
-    if (DirectoryExists(path))
-    {
-        result = true;
-    }
-
-    return result;
 }
 
 // Compress data (DEFLATE algorythm)
