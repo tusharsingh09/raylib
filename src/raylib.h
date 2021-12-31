@@ -1054,6 +1054,7 @@ RLAPI bool IsFileDropped(void);                                   // Check if a 
 RLAPI char **GetDroppedFiles(int *count);                         // Get dropped files names (memory should be freed)
 RLAPI void ClearDroppedFiles(void);                               // Clear dropped files paths buffer (free memory)
 RLAPI long GetFileModTime(const char *fileName);                  // Get file modification time (last write time)
+RLAPI bool MakeDirectory(const char* path);                       // Create a directory at the specified path with system commands
 
 // Compression/Encoding functionality
 RLAPI unsigned char *CompressData(unsigned char *data, int dataLength, int *compDataLength);        // Compress data (DEFLATE algorithm)
