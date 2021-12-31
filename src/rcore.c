@@ -1544,14 +1544,6 @@ void SetWindowOpacity(float opacity)
 #endif
 }
 
-// Gain focus on window
-void SetWindowFocused(void)
-{
-#if defined(PLATFORM_DESKTOP)
-    glfwWindowFocus(CORE.Window.handle);
-#endif
-}
-
 // Get current screen width
 int GetScreenWidth(void)
 {
